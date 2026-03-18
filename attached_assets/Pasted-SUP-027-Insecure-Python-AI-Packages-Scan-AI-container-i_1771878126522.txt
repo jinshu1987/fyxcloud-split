@@ -1,0 +1,19 @@
+SUP-027	Insecure Python AI Packages	Scan AI container images for vulnerable libraries (e.g., old versions of Transformers, LangChain).	Multi-Cloud (SCA)
+SUP-028	Unsigned Model Binaries	Detect if model weights being loaded into production lack a valid digital signature/hash.	Multi-Cloud
+SUP-029	Malicious Pickle File Load	Flag code in notebooks/functions using pickle.load() on untrusted model files.	Multi-Cloud
+SUP-030	Shadow Plugin Usage	Detect LLM "Tools" or "Plugins" that are not in the organization's approved manifest.	Multi-Cloud
+MON-031	AI Token Usage Spike	Alert on >300% increase in token consumption by a single IAM role within 1 hour (DoS).	Multi-Cloud
+MON-032	Persistent Safety Violations	Flag an identity that has triggered "Content Filter" blocks >50 times in a 24-hour period.	Multi-Cloud
+MON-033	Unmonitored AI Workspaces	Detect Azure Machine Learning workspaces with "Diagnostic Logging" turned off.	Azure
+MON-034	Model Drift Alert Missing	Identify deployed models that do not have an active "Monitoring Schedule" for performance.	AWS / GCP
+MON-035	Direct Prompt Injection Logs	Alert on log patterns containing common jailbreak strings (e.g., "DAN", "ignore previous").	Multi-Cloud
+GOV-036	Uncategorized AI High-Risk	Flag AI systems with use_case: hris or use_case: finance missing "High Risk" compliance tags.	EU AI Act / GRC
+GOV-037	Missing Model Card	Detect models in the registry that lack a documented "Model Card" (intended use/biases).	Multi-Cloud
+GOV-038	Human-in-Loop Bypass	Alert if a model with "Write" access to a DB does not require human approval for actions.	Multi-Cloud (Agents)
+GOV-039	Cross-Tenant Data Training	Flag if a model in Dev is trained on data residing in the Prod tenant/account.	Multi-Cloud
+GOV-040	AI Bias Monitoring Gap	Detect high-stakes inference endpoints that lack "Fairness" or "Bias" metrics tracking.	Multi-Cloud
+RUN-041	Insecure Output to SQL	Flag LLM outputs being passed directly to SQL query executors without parameterization.	AppSec / LLM
+RUN-042	XSS in LLM Web UI	Detect if the front-end for the AI model does not sanitize the response string for JS.	AppSec / LLM
+RUN-043	SSRF via LLM Tools	Alert if an AI agent is permitted to fetch internal URLs (e.g., http://169.254.169.254).	AWS / GCP / Azure
+RUN-044	Model Inversion Pattern	Detect high-frequency queries that appear to be probing model boundary weights (Extraction).	Multi-Cloud
+RUN-045	Sensitive Data in System Prompt	Scan "System Prompts" for hardcoded credentials, API keys, or internal IP addresses.	Multi-Cloud

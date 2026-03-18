@@ -1,0 +1,16 @@
+Rule ID,Rule Name,Rule Description,Applicability
+SUP-076,Training Data Integrity Gap,Detect datasets used in training/fine-tuning that lack cryptographic hashes (SHA-256) to verify they haven't been tampered with.,Multi-Cloud
+SUP-077,PII in RAG Sources,"Scan the ""Knowledge Base"" (PDFs, Wikis, Docs) used for RAG to ensure no clear-text customer data is being indexed.",Multi-Cloud (DSPM)
+SUP-078,Toxic Data Combinations,"Alert when two datasets, safe individually, are combined in a way that creates a ""high-risk"" PII profile for an AI agent.",Multi-Cloud
+SUP-079,Unauthorized KB Modification,"Detect any Write operations on a Knowledge Base by an identity that is not the authorized ""Data Curator"" role.",AWS / Azure
+SUP-080,Copyrighted Data Detection,"Flag training sets containing material from ""Opt-Out"" lists or restricted copyright repositories (e.g., news archives).",Compliance / Supply Chain
+SUP-081,Untrusted Data Origin,Alert if a model is fine-tuned using data pulled from a public URL or an unverified 3rd-party bucket.,Multi-Cloud
+SUP-082,PHI in AI Fine-tuning,Detect unmasked Protected Health Information (PHI) in datasets used for training healthcare-specific models.,HIPAA / Cloud
+SUP-083,Anomalous Training Metrics,"Flag training jobs where ""Loss"" or ""Accuracy"" shifts abruptly, indicating potential Data Poisoning or ""Backdoor"" insertion.",Multi-Cloud (MLOps)
+SUP-084,Missing Synthetic Data Flag,"Alert if ""Real"" production data is used for training where ""Synthetic"" data was mandated by policy.",Data Governance
+SUP-085,Shadow Data Sync (Prod to Dev),"Detect automated scripts or pipelines moving data from Production RDS to Dev S3 for ""ad-hoc"" AI experiments.",Multi-Cloud
+SUP-086,Bias/Fairness Metadata Gap,"Flag datasets that lack ""Demographic Parity"" or ""Fairness"" metadata, required for high-risk decision-making AI.",GRC / AI Act
+SUP-087,Opt-Out Signal Violation,"Detect if the AI scraper/ingestor ignored robots.txt or ""no-ai"" metadata tags during data collection.",Web-Scale AI
+SUP-088,Unsanitized Input Pipelines,"Flag data pipelines that feed into Vector DBs without a step for removing malicious scripts or ""Prompt Injection"" seeds.",AppSec
+SUP-089,"Missing Dataset ""Datasheet""","Detect datasets in the catalog that lack a formal ""Datasheet for Datasets"" (provenance, collection method, etc.).",Governance
+SUP-090,Unencrypted Data Transfer,"Identify ETL jobs (Glue, Dataflow) moving AI training data over the network without TLS 1.2+ encryption.",Multi-Cloud

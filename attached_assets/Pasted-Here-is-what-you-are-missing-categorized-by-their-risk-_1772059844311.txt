@@ -1,0 +1,33 @@
+Here is what you are missing, categorized by their risk to your AI posture:
+
+1. AI Data Ingestion & ETL (The "Poisoning" Vector)
+Your current scanner looks at S3, but it doesn't see how the data gets there. If a developer uses a "Shadow" ETL job to pull PII into an AI bucket, you need to catch it.
+
+AWS Glue (Crawlers & Jobs): Crucial for seeing the automated movement of data from production DBs into AI training buckets.
+
+Amazon AppFlow: Often used to pull data from SaaS apps (Salesforce, Slack, Zendesk) directly into Bedrock. This is a major "Shadow AI" data leak path.
+
+Amazon DataZone: As of 2026, this is the primary way enterprises "govern" AI data. If a model is using data not authorized in DataZone, it’s a compliance violation.
+
+2. Specialized & Vertical AI Services
+AWS has several "High-Level" AI services that don't use SageMaker but still process massive amounts of sensitive data.
+
+Amazon HealthScribe: Processes HIPAA-regulated patient-clinician conversations.
+
+Amazon Lex: The "Identity" of your AI. If a chatbot (Lex) is misconfigured, an attacker can use prompt injection to extract user session data.
+
+AWS Clean Rooms ML: Used for "Privacy-Preserving" ML. If someone misconfigures a Clean Room, they might accidentally leak raw data to a third-party partner under the guise of "collaborative training."
+
+3. Enhanced AI Governance & Logic
+You have Bedrock Flows and Agents, but you're missing the "Brain" and the "Connectors":
+
+Bedrock Prompt Management: A new 2025/2026 service. This is where system prompts are stored. Risk: If an attacker modifies a prompt here, they "Jailbreak" the entire application at the source.
+
+Amazon Kendra: Still heavily used for RAG (Retrieval Augmented Generation). If a Kendra Index is public, your AI is essentially a search engine for your internal secrets.
+
+AWS AppStudio: AWS's new GenAI-powered app builder. It creates "Shadow Apps" that have built-in AI components. You need to inventory these apps.
+
+4. Advanced Vector & Graph Storage
+Amazon Neptune Analytics: Many RAG workflows now use Graph+Vector (GraphRAG). Neptune is the primary store for this.
+
+Amazon Aurora (Vector Optimized): You mentioned "OpenSearch," but many teams use the pgvector extension in Aurora/RDS. If your scanner only looks at OpenSearch, you will miss 50% of your vector data.

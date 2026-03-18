@@ -1,0 +1,226 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+  
+  --color-sidebar: hsl(var(--sidebar));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --font-sans: 'Nunito Sans', sans-serif;
+  --font-mono: 'Nunito Sans', sans-serif;
+}
+
+/* LIGHT MODE - CLEAN FUTURE */
+:root {
+  /* Clean White/Light Gray Backgrounds */
+  --background: 210 40% 98%;
+  --foreground: 222 47% 11%;
+
+  /* Glassy Cards - Light Mode */
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+
+  /* Sapphire Blue Primary - Slightly Darker for Contrast on Light */
+  --primary: 217 91% 50%;
+  --primary-foreground: 210 40% 98%;
+
+  /* Light Gray Secondary */
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 47% 11%;
+
+  /* Muted Text */
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+
+  /* Cyan/Teal Accents */
+  --accent: 210 40% 96%;
+  --accent-foreground: 222 47% 11%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 217 91% 50%;
+
+  --radius: 0.75rem;
+
+  /* Chart Colors - Adjusted for Light Mode */
+  --chart-1: 217 91% 50%; /* Sapphire */
+  --chart-2: 190 90% 40%; /* Cyan */
+  --chart-3: 260 60% 50%; /* Purple */
+  --chart-4: 340 70% 50%; /* Pink */
+  --chart-5: 45 90% 50%;  /* Amber */
+
+  --sidebar: 0 0% 100%;
+  --sidebar-foreground: 222 47% 11%;
+  --sidebar-primary: 217 91% 50%;
+  --sidebar-primary-foreground: 210 40% 98%;
+  --sidebar-accent: 210 40% 96%;
+  --sidebar-accent-foreground: 222 47% 11%;
+  --sidebar-border: 214 32% 91%;
+  --sidebar-ring: 217 91% 50%;
+}
+
+/* DARK MODE - SAPPHIRE THEME */
+.dark {
+  /* Deep Blue / Black Backgrounds */
+  --background: 224 71% 4%;
+  --foreground: 210 40% 98%;
+
+  /* Glassy Cards */
+  --card: 224 71% 7%;
+  --card-foreground: 210 40% 98%;
+  
+  --popover: 224 71% 7%;
+  --popover-foreground: 210 40% 98%;
+
+  /* Sapphire Blue Primary */
+  --primary: 217 91% 60%;
+  --primary-foreground: 222 47% 11%;
+
+  /* Deep Blue Secondary */
+  --secondary: 217 32% 17%;
+  --secondary-foreground: 210 40% 98%;
+
+  /* Muted Text */
+  --muted: 217 32% 17%;
+  --muted-foreground: 215 20% 65%;
+
+  /* Cyan/Teal Accents for "Future" feel */
+  --accent: 217 32% 17%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217 32% 17%;
+  --input: 217 32% 17%;
+  --ring: 217 91% 60%;
+
+  /* Chart Colors */
+  --chart-1: 217 91% 60%; /* Sapphire */
+  --chart-2: 190 90% 50%; /* Cyan */
+  --chart-3: 260 80% 60%; /* Purple */
+  --chart-4: 340 70% 60%; /* Pink */
+  --chart-5: 45 90% 60%;  /* Amber */
+
+  --sidebar: 224 71% 4%;
+  --sidebar-foreground: 240 5% 96%;
+  --sidebar-primary: 217 91% 60%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 217 32% 17%;
+  --sidebar-accent-foreground: 240 5% 96%;
+  --sidebar-border: 217 32% 17%;
+  --sidebar-ring: 217 91% 60%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground transition-colors duration-300;
+    font-size: 14px;
+  }
+  
+  .dark body {
+    background-image: 
+      radial-gradient(circle at 50% 0%, hsl(217 91% 60% / 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 0% 50%, hsl(260 80% 60% / 0.1) 0%, transparent 40%);
+    background-attachment: fixed;
+  }
+  
+  /* Light mode subtle gradient */
+  :root body {
+    background-image: 
+      radial-gradient(circle at 50% 0%, hsl(217 91% 50% / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 0% 50%, hsl(260 60% 50% / 0.03) 0%, transparent 40%);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-card/60 backdrop-blur-xl border border-border shadow-lg transition-all duration-300;
+  }
+  
+  .glass-card {
+    @apply bg-card/40 backdrop-blur-md border border-border hover:border-primary/50 transition-all duration-300;
+  }
+  
+  /* Dark mode overrides for glass effect to handle contrast */
+  .dark .glass-panel {
+    @apply bg-card/60 border-white/10;
+  }
+  
+  .dark .glass-card {
+    @apply bg-card/40 border-white/5;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+  }
+
+  .border-glow {
+    box-shadow: 0 0 15px -3px hsl(var(--primary) / 0.3);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}

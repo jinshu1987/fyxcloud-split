@@ -1,0 +1,210 @@
+Competitor Comparison Page
+Fyx Cloud AI vs Traditional CNAPP Platforms
+Hero Section
+Title
+
+Traditional Cloud Security Stops at Infrastructure.
+Fyx Secures the Intelligence Layer.
+
+Subtitle
+
+Compare how Fyx Cloud AI goes beyond Wiz, Orca, and Prisma Cloud to secure the full AI lifecycle.
+
+Paragraph
+
+Cloud security platforms were built for infrastructure—VMs, containers, and misconfigurations. But modern environments are powered by AI: models, agents, vector databases, and data pipelines.
+
+Fyx Cloud AI introduces AI Security Posture Management (AI-SPM)—a new approach that secures the AI supply chain, runtime behavior, and agentic systems across AWS, Azure, and GCP.
+
+The Core Problem
+Why CNAPP Tools Are Not Enough
+
+Traditional tools like Wiz, Orca, and Prisma Cloud:
+
+Focus on infrastructure and workloads
+
+Lack visibility into AI models and agents
+
+Do not understand prompt-based attacks
+
+Cannot map AI data lineage or RAG pipelines
+
+Treat AI risks as generic misconfigurations
+
+Result:
+
+Critical AI risks remain invisible.
+
+Feature Comparison Table
+Fyx Cloud AI vs Wiz vs Orca vs Prisma Cloud
+Capability	Fyx Cloud AI (AI-SPM)	Wiz	Orca	Prisma Cloud
+AI Asset Inventory (AI-BOM)	Full (models, agents, vector DBs)	Partial (infra only)	Partial	Partial
+Shadow AI Detection	Yes (SaaS, agents, local LLMs)	No	No	No
+AI Model Visibility	Full (Bedrock, Vertex, Azure OpenAI)	Limited	Limited	Limited
+Vector Database Security	Yes	No	No	No
+RAG Data Lineage	Full tracking	No	No	No
+Prompt Injection Detection	Yes	No	No	No
+Jailbreak Detection	Yes	No	No	No
+AI Runtime Monitoring	Yes	No	No	No
+Toxic Path Analysis (AI-specific)	Yes (Identity + Data + Model)	Limited (infra graph only)	Limited	Limited
+AI Identity (Agent) Security	Full (non-human CIEM)	No	No	No
+AI Guardrail Monitoring	Yes	No	No	No
+Data Poisoning Detection	Yes	No	No	No
+AI Compliance (EU AI Act)	Yes	No	No	No
+Multi-Cloud AI Security	Native (AWS/Azure/GCP)	Infra-focused	Infra-focused	Infra-focused
+Agentic AI Protection	Yes	No	No	No
+Where Fyx Wins
+1. AI-Native Visibility
+
+Traditional CNAPP tools:
+
+See compute and storage
+
+Fyx:
+
+Sees models, prompts, agents, and embeddings
+
+Outcome: Complete visibility into the AI layer
+
+2. Security for the Prompt Lifecycle
+
+Traditional tools:
+
+No visibility into prompts or outputs
+
+Fyx:
+
+Detects prompt injection, jailbreaks, and unsafe outputs
+
+Outcome: Runtime protection for AI interactions
+
+3. Data Supply Chain Protection
+
+Traditional tools:
+
+Focus on storage misconfigurations
+
+Fyx:
+
+Tracks data from source → embedding → model
+
+Outcome: Prevents data leakage and poisoning
+
+4. Agentic AI Governance
+
+Traditional tools:
+
+Focus on human identities
+
+Fyx:
+
+Secures non-human AI agents and their permissions
+
+Outcome: Prevents autonomous privilege abuse
+
+5. AI Risk Prioritization
+
+Traditional tools:
+
+Thousands of disconnected alerts
+
+Fyx:
+
+Identifies real attack paths using graph correlation
+
+Outcome: Focus on what actually matters
+
+Example Scenario Comparison
+Scenario: Data Leak via AI
+Environment
+
+Public S3 bucket with sensitive data
+
+Overprivileged IAM role
+
+Bedrock model using that data
+
+AI agent with database write access
+
+Wiz / Orca / Prisma
+
+Detect public S3 bucket
+
+Flag IAM role permissions
+
+What they miss:
+
+Data is used in RAG pipeline
+
+Model can expose data via prompts
+
+Agent can act on leaked data
+
+Fyx Cloud AI
+
+Detects public S3 bucket
+
+Detects overprivileged IAM role
+
+Identifies model using that dataset
+
+Maps agent permissions
+
+Correlates full attack path
+
+Final Output:
+Critical Toxic Path identified and prioritized
+
+The Category Shift
+CNAPP vs AI-SPM
+Area	CNAPP	AI-SPM (Fyx)
+Focus	Infrastructure	AI Lifecycle
+Visibility	Compute, storage	Models, agents, data, prompts
+Threats	Misconfigurations	Prompt injection, data poisoning, model abuse
+Identity	Human users	Human + AI agents
+Data	Static storage	Dynamic AI data flows
+Output	Alerts	Actionable attack paths
+When You Need Fyx
+
+You need Fyx Cloud AI if:
+
+You are using AWS Bedrock, Azure OpenAI, or Vertex AI
+
+You have RAG pipelines or vector databases
+
+You are building AI agents or copilots
+
+You handle sensitive data in AI workflows
+
+You need to comply with AI regulations (EU AI Act)
+
+Customer Value
+What Customers Gain
+
+Full AI visibility across multi-cloud
+
+Reduced risk of data leakage
+
+Protection against AI-specific attacks
+
+Faster compliance readiness
+
+Reduced alert fatigue through prioritization
+
+Final Section
+Title
+
+Stop Securing the Past. Start Securing AI.
+
+Paragraph
+
+Wiz, Orca, and Prisma Cloud were built for a world before AI became the core of modern applications.
+
+Fyx Cloud AI is built for what comes next—
+a world of autonomous systems, intelligent agents, and data-driven decision-making.
+
+CTA
+
+Book a Demo
+
+Run a Free AI Exposure Scan

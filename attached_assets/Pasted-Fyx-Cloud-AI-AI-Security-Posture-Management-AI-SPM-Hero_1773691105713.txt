@@ -1,0 +1,385 @@
+Fyx Cloud AI – AI Security Posture Management (AI-SPM)
+Hero Section
+Title
+
+Secure the Intelligence Layer of Your Cloud.
+
+Subtitle
+
+Full visibility, governance, and protection for AI across AWS, Azure, and GCP.
+
+Paragraph
+
+AI is moving faster than security teams can track it. Models, agents, datasets, vector databases, and prompt pipelines are being deployed across multiple clouds—often without oversight. Traditional CSPM tools see infrastructure, but they cannot see the intelligence layer running on top of it.
+
+Fyx Cloud AI introduces a new category: AI Security Posture Management (AI-SPM). It discovers every AI asset, maps the entire AI supply chain, and detects toxic security paths before they become breaches. With over 100 precision detection rules, Fyx continuously secures your AI environment—from training data to runtime inference.
+
+Product Overview
+What Fyx Cloud AI Does
+
+Fyx Cloud AI is a cloud-native AI Security Posture Management platform designed to secure the complete lifecycle of AI systems.
+
+It provides continuous visibility into:
+
+AI models and endpoints
+
+AI agents and prompt flows
+
+vector databases and knowledge bases
+
+training datasets and feature stores
+
+AI identities and permissions
+
+runtime AI interactions
+
+Fyx connects these components into a unified risk graph, enabling organizations to detect and prioritize security risks that traditional security tools miss.
+
+The platform works across AWS, Azure, and Google Cloud, integrating directly with cloud APIs to inventory AI resources, analyze configurations, and enforce security policies.
+
+Core Platform Capabilities
+1. AI Asset Discovery and AI-BOM Inventory
+
+Fyx continuously discovers and inventories every AI-related resource across your cloud environments.
+
+Key capabilities
+
+Unified AI Asset Inventory
+Creates a complete AI Bill of Materials (AI-BOM) including models, agents, training jobs, datasets, and vector databases.
+
+Model Discovery
+Identifies foundation models, custom models, and fine-tuned deployments across Bedrock, SageMaker, Azure OpenAI, and Vertex AI.
+
+Inference Endpoint Detection
+Discovers all deployed model endpoints and their access configurations.
+
+Agent Inventory
+Tracks all AI agents, tool integrations, and action groups used by LLM applications.
+
+Vector Database Discovery
+Automatically inventories vector databases including:
+
+OpenSearch vector engine
+
+Pinecone
+
+Weaviate
+
+Milvus
+
+Aurora pgvector
+
+Neptune GraphRAG environments
+
+Notebook and Development Environment Discovery
+Detects development environments such as:
+
+SageMaker notebooks
+
+Vertex AI workbenches
+
+Azure ML notebooks
+
+Training Job Inventory
+Tracks model training pipelines and processing jobs.
+
+Knowledge Base Discovery
+Identifies RAG knowledge sources and document indexes.
+
+2. Shadow AI Detection
+
+Fyx identifies unsanctioned AI systems operating outside approved environments.
+
+Key capabilities
+
+Shadow SaaS AI Detection
+Detects outbound traffic to unauthorized AI services including OpenAI, Anthropic, Mistral, and other AI APIs.
+
+Rogue GPU Compute Detection
+Identifies GPU-enabled instances used for unapproved AI workloads.
+
+Unmanaged Model Deployments
+Flags model endpoints that are not registered in the official AI inventory.
+
+Shadow Data Pipelines
+Detects ETL pipelines moving production data into AI environments without approval.
+
+Local LLM Detection
+Identifies self-hosted AI systems such as Ollama or vLLM deployed on cloud compute.
+
+Unauthorized OAuth AI Apps
+Detects AI SaaS applications integrated via SSO without approval.
+
+3. Toxic Path Risk Analysis
+
+Fyx uses a graph-based risk engine to detect multi-step attack paths.
+
+Key capabilities
+
+Identity-Data-Model Correlation
+Links IAM roles, data sources, and model endpoints to identify real attack paths.
+
+Critical Risk Path Detection
+Identifies combinations such as:
+
+Public data bucket → Overprivileged IAM role → AI model endpoint
+
+Prioritized Remediation
+Focuses on the few security paths that could lead to real breaches.
+
+Attack Path Visualization
+Provides visual mapping of AI infrastructure relationships.
+
+4. Data Supply Chain Security
+
+AI systems are only as secure as the data they are trained on.
+
+Fyx protects the full AI data lifecycle.
+
+Key capabilities
+
+RAG Data Lineage Tracking
+Tracks data flow from source storage to embeddings and vector indexes.
+
+PII and PHI Detection
+Scans datasets for sensitive information before ingestion into training pipelines.
+
+Dataset Integrity Monitoring
+Detects unauthorized changes to training or grounding data.
+
+Data Poisoning Detection
+Identifies suspicious modifications that may introduce model backdoors.
+
+Cross-Account Data Access Monitoring
+Detects AI workloads accessing external storage accounts.
+
+Dataset Governance
+Ensures training data complies with internal governance policies.
+
+5. AI Runtime Threat Protection
+
+Fyx monitors runtime model behavior and protects against AI-specific attacks.
+
+Key capabilities
+
+Prompt Injection Detection
+Identifies attempts to manipulate model instructions.
+
+Indirect Prompt Injection Monitoring
+Detects malicious instructions embedded in documents used by RAG systems.
+
+Jailbreak Detection
+Flags adversarial prompts attempting to bypass model safeguards.
+
+Model Output Monitoring
+Analyzes AI outputs for harmful or unsafe content.
+
+Inference Rate Monitoring
+Detects token exhaustion and denial-of-service attacks against model endpoints.
+
+Safety Filter Verification
+Ensures built-in model guardrails are enabled and correctly configured.
+
+6. Identity and Access Security for AI
+
+Fyx applies identity governance to non-human AI identities.
+
+Key capabilities
+
+AI Identity Inventory
+Tracks service accounts and identities used by AI systems.
+
+Execution Role Hardening
+Detects overprivileged roles used by training jobs and inference endpoints.
+
+Permission Boundary Enforcement
+Ensures AI identities cannot escalate privileges.
+
+Short-Lived Credential Enforcement
+Detects long-lived API keys and enforces temporary credentials.
+
+Credential Leak Detection
+Scans environments for exposed AI API tokens.
+
+Agent Permission Monitoring
+Ensures AI agents only access authorized tools and data.
+
+7. Cloud Infrastructure Hardening
+
+Fyx analyzes cloud configurations used by AI systems.
+
+Key capabilities
+
+Network Isolation Verification
+Ensures AI services operate within private network boundaries.
+
+Encryption Enforcement
+Verifies encryption of model artifacts and training data.
+
+Endpoint Exposure Detection
+Identifies publicly accessible inference endpoints.
+
+Notebook Security Monitoring
+Detects notebooks with public internet access or root privileges.
+
+Vector Database Security Checks
+Ensures vector indexes are not exposed to unauthorized access.
+
+8. Compliance and Governance
+
+Fyx helps organizations meet emerging AI governance requirements.
+
+Key capabilities
+
+EU AI Act Compliance Monitoring
+Maps AI assets to EU AI Act risk classifications.
+
+NIST AI Risk Management Framework Reporting
+Generates compliance reports aligned with NIST AI RMF.
+
+ISO 42001 Readiness
+Provides visibility required for AI governance certification.
+
+Audit Trail Generation
+Logs model usage, prompts, training data lineage, and decisions.
+
+Transparency Reporting
+Supports regulatory documentation requirements.
+
+9. AWS AI Security Coverage
+
+Fyx provides deep visibility into AWS AI services.
+
+Supported AWS resources
+
+Amazon Bedrock models
+
+Bedrock custom models
+
+Bedrock agents
+
+Bedrock knowledge bases
+
+Bedrock flows
+
+SageMaker models
+
+SageMaker endpoints
+
+SageMaker notebooks
+
+SageMaker pipelines
+
+SageMaker training jobs
+
+SageMaker feature store
+
+OpenSearch vector collections
+
+S3 training datasets
+
+IAM execution roles
+
+Lambda action groups
+
+Step Functions AI orchestration
+
+10. Azure AI Security Coverage
+
+Fyx secures AI systems running on Microsoft Azure.
+
+Supported Azure services
+
+Azure OpenAI deployments
+
+Azure AI Foundry
+
+Azure Machine Learning workspaces
+
+Azure ML endpoints
+
+Azure AI agents
+
+Azure Blob training data
+
+Microsoft Purview data labels
+
+Entra ID AI identities
+
+Azure AI Content Safety
+
+11. Google Cloud AI Security Coverage
+
+Fyx protects AI systems running on Google Cloud.
+
+Supported GCP services
+
+Vertex AI models
+
+Vertex AI endpoints
+
+Vertex AI datasets
+
+Vertex AI pipelines
+
+Vertex AI workbenches
+
+Vertex AI agents
+
+GCS training datasets
+
+Vertex vector search
+
+Model Armor safety services
+
+Platform Usability
+Agentless Deployment
+
+Fyx integrates with cloud environments using read-only APIs. No agents or infrastructure changes are required.
+
+Setup typically takes less than 15 minutes.
+
+Unified Dashboard
+
+Security teams get a centralized view of:
+
+AI assets
+
+active risks
+
+shadow AI activity
+
+compliance posture
+
+toxic risk paths
+
+Policy Engine
+
+Organizations can create custom AI security policies using the built-in rule engine.
+
+Automated Remediation
+
+Fyx provides remediation guidance and automated scripts for fixing common issues.
+
+Security Integrations
+
+Fyx integrates with existing security tools including:
+
+SIEM platforms
+
+incident response systems
+
+messaging platforms
+
+security orchestration workflows
+
+Call to Action
+Secure Your AI Infrastructure Today
+
+AI innovation is accelerating. Security must evolve just as quickly.
+
+Fyx Cloud AI provides the visibility, governance, and protection needed to safely deploy AI across the modern multi-cloud environment.
+
+Discover your AI assets.
+Identify your real risks.
+Fix your AI security posture.

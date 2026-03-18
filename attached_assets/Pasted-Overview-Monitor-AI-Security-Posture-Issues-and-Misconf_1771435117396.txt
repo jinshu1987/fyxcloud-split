@@ -1,0 +1,180 @@
+Overview
+Monitor AI Security Posture, Issues, and Misconfigurations over time.
+
+AI Security Issues by Severity
+
+C
+0
+Critical Issues
+0%
+H
+0
+High Issues
+0%
+M
+4
+Medium Issues
+0%
+L
+0
+Low Issues
+0%
+Open Issues
+Past 30 days
+
+
+Critical
+0%
+0
+Chart
+Chart with 31 data points.
+The chart has 1 X axis displaying Time. Data ranges from 2026-01-19 00:00:00 to 2026-02-18 17:18:16.
+The chart has 1 Y axis displaying values. Data ranges from 0 to 4.
+End of interactive chart.
+High
+0%
+0
+Chart
+Chart with 31 data points.
+The chart has 1 X axis displaying Time. Data ranges from 2026-01-19 00:00:00 to 2026-02-18 17:18:16.
+The chart has 1 Y axis displaying values. Data ranges from 0 to 4.
+End of interactive chart.
+AI Misconfigurations
+
+0
+Critical Severity
+0
+High Severity
+0
+Medium Severity
+2
+Low Severity
+AI Security Posture
+
+owasp
+OWASP LLM Security Top 10
+99%
+owasp
+OWASP ML Security Top 10
+99%
+Top AI Risks
+Remediate your top AI Risks to strengthen security posture.
+
+Top Issues
+1 rule
+
+Rule
+Issues
+Risks
+Severity
+
+3rd party access to AI model in bucket
+4
+
+Medium
+High Risk AI Models
+
+
+You're all set!
+No matching findings.
+
+AI External Exposure
+Review and secure externally exposed AI Applications and MCP workloads: confirm or modify access as needed.
+
+Publicly Exposed AI Application Endpoints
+
+
+You're all set!
+No matching findings.
+
+Publicly Exposed MCP Servers
+
+
+You're all set!
+No matching findings.
+
+AI with Access to Sensitive Data
+Review and confirm AI access to sensitive data.
+
+AI Agents with Access to Sensitive Data
+
+
+You're all set!
+No matching findings.
+
+AI Models Trained on Sensitive Data
+
+
+You're all set!
+No matching findings.
+
+Misconfigurations and Vulnerabilities
+Remediate Misconfigurations and Vulnerabilities to improve your AI Security posture.
+
+Critical and High Misconfiguration of AI Resources
+
+
+You're all set!
+No matching findings.
+
+Critical and High Vulnerabilities in AI Software
+
+Technology
+vllm
+0.14.1
+
+1
+C
+6
+H
+
+1
+Technology
+mlflow
+-
+
+0
+C
+32
+H
+
+4
+Technology
+fastmcp
+2.14.0
+
+0
+C
+12
+H
+
+5
+Technology
+mcp
+1.23.0
+
+0
+C
+6
+H
+
+5
+Shadow AI
+Uncover Shadow AI in your environment: review workload DNS Queries, their global destinations, and exposed AI Secrets.
+
+AI SaaS DNS Queries
+
+
+No matching DNS events. Enable Wiz Defend to start generating results.
+
+Learn more
+Exposed AI Service Secrets
+
+Rule
+Findings
+Huggingface API Access Token
+
+16
+H
+
+Azure OpenAI Key

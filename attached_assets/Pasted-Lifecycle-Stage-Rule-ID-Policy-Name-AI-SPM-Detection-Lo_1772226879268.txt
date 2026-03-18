@@ -1,0 +1,15 @@
+Lifecycle Stage,Rule ID,Policy Name,AI-SPM Detection Logic,Risk / Impact
+Development,SM-001,No Direct Internet Access,Flag SageMaker Notebooks or Studio Apps where DirectInternetAccess is set to Enabled.,Exfiltration: Prevents unmonitored data transfer to personal cloud storage.
+,SM-002,No Root Privileges,Detect Notebooks where RootAccess is enabled for the execution user.,Breakout: Prevents users from disabling security agents or local logging.
+,SM-003,Unencrypted Notebook Storage,Flag Notebook Instances or Studio Domains missing a Customer Managed Key (KMS) for EBS volumes.,Model Theft: Raw code and local weights are stored in plain text on cloud disks.
+Data / Build,SM-004,Overprivileged Execution Role,Alert on roles with s3:* or iam:PassRole permissions without resource constraints.,Blast Radius: A single compromised notebook can access the entire corporate data lake.
+,SM-005,Feature Store Public Access,Detect SageMaker Feature Stores with resource-based policies allowing Principal: *.,"PII Leakage: Feature stores often contain pre-computed, sensitive user attributes."
+,SM-006,Unencrypted Training Jobs,Flag Training or Processing jobs where VolumeKmsKeyId is missing or null.,Data Exposure: Temporary data used during training is stored unencrypted on scratch space.
+,SM-007,Insecure Inter-Container Traffic,Alert if distributed training jobs have EnableInterContainerTrafficEncryption set to False.,Sniffing: Attackers within the VPC can intercept model gradients or training data in transit.
+Inference,SM-008,Unauthenticated Endpoints,"Detect Inference Endpoints with no AuthType or using a ""None"" authentication scheme.","Model Hijacking: Allows any entity to query the model, leading to cost spikes or model inversion."
+,SM-009,Missing Model Monitoring,Flag production endpoints that lack an active SageMaker Model Monitor schedule.,"Drift/Bias: The model may start providing ""hallucinated"" or toxic responses without detection."
+,SM-010,Unprotected Inference VPC,Alert if an Endpoint is deployed without a VPC configuration (relying on public internet access).,Perimeter Breach: Exposes the model's serving infrastructure to public scanning and DDoS.
+,SM-011,Insecure Deserialization (RCE),Scan inference scripts for use of pickle.load() on untrusted application/json inputs.,Remote Code Execution: An attacker can crash or take over the container via a malicious prompt.
+Governance,SM-012,Model Registry Lineage Gap,Flag model versions in the Registry that are not linked to a verified Training Job ARN.,"Compliance: Violates ""Traceability"" requirements (e.g., EU AI Act) for model provenance."
+,SM-013,Production Model Status Drift,"Alert when a model is set to Approved in the Registry without a completed ""Safety Review"" tag.",Safety Bypass: Allows developers to push unvetted models directly to production.
+,SM-014,Unmonitored Data Capture,"Detect Endpoints where DataCaptureConfig is disabled, preventing audit trails of AI prompts.",Audit Failure: No record of what users asked the AI or how the AI responded.

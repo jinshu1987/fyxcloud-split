@@ -1,0 +1,16 @@
+Rule ID,Rule Name,Rule Description,Applicability
+NET-061,Exposed Vector DB API,"Detect Pinecone, Weaviate, or Milvus control planes exposed to 0.0.0.0/0 (Public Internet).",Multi-Cloud
+NET-062,Missing VPC Peering Isolation,"Flag AI inference clusters that are peered with the entire Corporate VPC instead of a restricted ""AI Sandbox"" subnet.",Multi-Cloud
+NET-063,Unencrypted Vector Transit,Detect if communication between the LLM Agent and the Vector Database is using unencrypted HTTP (Port 80) instead of HTTPS (443).,Multi-Cloud
+NET-064,Shared Vector Index Risk,"Alert if ""Tenant A"" and ""Tenant B"" data are stored in the same Vector Index without logical ""Metadata Filtering"" enforcement.",Multi-Tenant AI
+NET-065,Insecure SageMaker Edge,Flag SageMaker Edge Manager deployments with open SSH (Port 22) or unauthenticated local endpoints.,AWS
+NET-066,Anomalous Outbound Data,Detect an AI Model instance sending >1GB of data to an unknown external IP (Potential Model/Weight exfiltration).,Multi-Cloud
+NET-067,Legacy TLS for AI APIs,"Flag AI service endpoints (e.g., Vertex AI) that still support TLS 1.0 or 1.1 instead of enforced TLS 1.2+.",GCP / Azure
+NET-068,Unprotected Prompt Gateway,"Detect if the ""AI Gateway"" (Kong, Apigee, etc.) is missing a Web Application Firewall (WAF) to block basic SQLi/XSS.",Multi-Cloud
+NET-069,Vector DB Backup Exposure,Identify snapshots/backups of Vector Databases stored in publicly readable S3 buckets or Azure Blobs.,Multi-Cloud
+NET-070,Unauthenticated Prometheus/Grafana,"Detect monitoring dashboards for AI clusters (GPU utilization, etc.) that lack SSO/MFA.",Multi-Cloud
+NET-071,Direct Database Connection,Alert if an AI Agent connects directly to a Production SQL Database without going through a Proxy or API layer.,Multi-Cloud
+NET-072,Missing Rate Limiting (DDoS),"Flag AI Inference endpoints that lack a ""Request-per-Minute"" (RPM) cap, making them vulnerable to ""Token Exhaustion"" attacks.",Multi-Cloud
+NET-073,Insecure Kubernetes Ingress,"Detect K8s Ingress controllers for AI models (e.g., KServe) missing cert-manager for automatic SSL/TLS rotation.",Multi-Cloud (K8s)
+NET-074,Cross-VPC Model Inference,"Alert when a model in the ""Dev"" VPC is being queried by an application in the ""Prod"" VPC (Environment Bleed).",Multi-Cloud
+NET-075,Unverified Webhook Sources,"Detect AI Agent webhooks (e.g., from Slack or GitHub) that do not validate the ""Signature Header"" for incoming requests.",Multi-Cloud

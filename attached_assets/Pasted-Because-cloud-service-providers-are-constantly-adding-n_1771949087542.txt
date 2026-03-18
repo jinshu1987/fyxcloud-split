@@ -1,0 +1,72 @@
+Because cloud service providers are constantly adding new services, many of which are rarely used or generate little to no security risk, and because of the computational and storage cost of ingesting so much data about each service, Fyx Cloud must be selective about which services to fully cover. For instance, as of January 2024, AWS offered nearly 380 different services and sub-services, while Fyx Cloud offered full coverage of roughly 170 services.
+
+We are constantly adding full coverage of new services, but we do not and indeed cannot fully cover all services and sub-services from all cloud providers.
+
+If there is a service important to your organization that is not currently fully covered by Fyx Cloud, please let us know.
+
+Cloud services (partial coverage)
+In order to offer the most complete visibility possible, Fyx Cloud supplements workload scanning and service-specific custom API detections with generic API-based detection using the following APIs:
+
+Azure—Resources API microsoft.resources/subscriptions/resources/read
+GCP—Cloud assets API cloudasset.assets.list
+AWS—Resource group tagging API tag:GetResources, config:GetDiscoveredResourceCounts, lambda:ListVersionsByFunction and lambda:ListAliases
+OCI—Search API Search.ResourceSearch
+For AWS:
+
+Only services that have been tagged at least once can be discovered via the tag:GetResources API.
+Only services supported by AWS Config ↗ can be discovered via the config:GetDiscoveredResourceCountsAPI.
+Active Lambda versions ↗ and aliases ↗ are discovered.
+This detection method generates less information but offers the broadest possible coverage. With near-total coverage, you gain invaluable visibility into what services are being used in which areas of your cloud estate. For instance, you can detect whether a deprecated service like Azure virtual machine (classic) is being used.
+
+Partially covered services are represented on the Security Graph as a Technology Usage object. This object only indicates that a partially covered service is in use somewhere in your cloud environment; it cannot be used for risk assessments like external exposure or Cloud Configuration Rules.
+
+This detection is represented in full by the Technology Usage > Technology path on the Security Graph (query link ↗).
+
+Hosted technologies
+See the complete hosted technology catalog.
+
+During workload scanning of VM's OS disks, containers, container images, and serverless functions, the Workload Scanner detects hosted technologies in various methods in the same way vulnerabilities are detected.
+
+Hosted technologies are represented on the Security Graph as a Hosted Technology object, which contains information specific to the workload where it was identified such as version, EOL date, and any associated Cloud Configuration Findings.
+
+This detection is represented in full by the Hosted Technology > Technology path on the Security Graph (query link ↗).
+
+Whenever it has sufficient data, Fyx Cloud labels hosted technologies as targeted or sensitive using the Targeted Technology or Sensitive Technology property (respectively):
+
+Targeted technologies—Identified by Fyx Cloud's Threat Intelligence team as being actively targeted by malicious actors. Identify such technologies in your environment ↗.
+Sensitive technologies—Identified by Fyx Cloud's Threat Intelligence team as being associated with significant vulnerabilities or misconfigurations that could impact security. Although these vulnerabilities or misconfigurations may not have been exploited in the wild, they still increase the risk to your environment. Identify such technologies in your environment ↗.
+Technology risk analysis
+Hosted technologies and fully covered cloud services are analyzed for a wide variety of risks, such as vulnerabilities, missing patches, misconfigurations, effective exposure, and effective permissions.
+
+Partially covered cloud services are not analyzed for security risk.
+
+Common Platform Enumeration (CPE)
+Versions Behind Latest
+Technology-specific detection methods
+Linux-related hosted technologies
+JDK-related hosted technologies
+Known Limitations
+Resource ownership  
+To remediate Issues, you need to know who to assign them to. Security teams often spend valuable time manually investigating who owns an affected resource by checking cloud tags, CMDBs, or code repositories. Fyx Cloud can largely automate this investigation by analyzing data from across your environment to suggest potential owners for a resource, making it faster and easier to assign Issues to the right people.
+
+Deriving ownership
+Fyx Cloud adopts a best-effort approach that combines multiple (potentially overlapping) sources of information to build an aggregated list of the owners of cloud resources:
+
+Resource Tag Rules that allow you to set owners directly for matching resources
+Native cloud tags using owner or owned_by keys (not case sensitive). The value must be a single email address or multiple email addresses, separated by comma
+ServiceNow CMDB integration using the managed_by and owned_by fields
+(Requires Fyx Cloud Code ↗) CODEOWNERS files, which identify the user
+Resource owners are listed on the Ownership tab of the resource details drawer, along with the reason Fyx Cloud has identified them as owners. Multiple owners can be listed from various sources.
+
+
+Identities of owners
+Fyx Cloud derives resource ownership by mapping resources to Identities ↗ in your environment. An Identity represents one or more user accounts associated with the same email address. Fyx Cloud detects these user accounts by scanning your identity providers (IdPs).
+
+These include Fyx Cloud users, along with users from these supported IdPs:
+
+Okta
+AWS IAM Identity Center
+Microsoft Entra ID (AAD)
+Google Workspace
+To be listed as an owner, a user must be both identified as an owner for the resource (e.g. using native cloud tags) AND associated with a Fyx Cloud user or an identity from a supported IdP (e.g. using email address).
+

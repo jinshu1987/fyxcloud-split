@@ -1,0 +1,491 @@
+1. Pricing Page
+Hero Section
+Title
+
+Flexible Pricing for Every Stage of AI Adoption
+
+Subtitle
+
+From early experimentation to enterprise-scale AI governance—Fyx scales with you.
+
+Paragraph
+
+Whether you're just starting your AI journey or managing complex multi-cloud AI environments, Fyx Cloud AI provides transparent, scalable pricing. Start with full visibility, and expand into advanced governance, automation, and compliance as your AI footprint grows.
+
+Pricing Model Overview
+
+Fyx pricing is based on AI Asset Coverage, not traditional cloud resources.
+
+What counts as an “AI Asset”:
+
+Models (Bedrock, Vertex, Azure OpenAI)
+
+Inference endpoints
+
+AI agents
+
+Knowledge bases
+
+Vector databases
+
+Training jobs
+
+AI-specific IAM identities
+
+Pricing Tiers
+Starter (Free / Trial)
+
+Best for: Evaluation & small teams
+
+Up to 50 AI assets
+
+Basic AI-BOM inventory
+
+Shadow AI detection (limited)
+
+Core risk detection (top 20 rules)
+
+Single cloud integration (AWS or Azure or GCP)
+
+Dashboard access
+
+Limitations:
+
+No toxic path analysis
+
+No compliance reporting
+
+No automation
+
+CTA: Start Free Scan
+
+Growth
+
+Best for: Scaling AI teams
+
+Up to 500 AI assets
+
+Full AI-BOM inventory
+
+Shadow AI detection (full)
+
+100+ AI-SPM detection rules
+
+Toxic Path Analysis
+
+Multi-cloud support (AWS + Azure + GCP)
+
+Data supply chain visibility (RAG lineage)
+
+Basic compliance mapping (EU AI Act, NIST)
+
+Includes:
+
+Email alerts
+
+Weekly posture reports
+
+CTA: Book Demo
+
+Enterprise
+
+Best for: Regulated and large-scale environments
+
+Unlimited AI assets
+
+Full AI-SPM coverage across all clouds
+
+Advanced Toxic Path Analysis (graph engine)
+
+Real-time runtime protection (prompt injection, jailbreak detection)
+
+Custom policy engine
+
+Compliance automation (EU AI Act, ISO 42001, SOC2)
+
+Audit-ready reporting
+
+API access
+
+Includes:
+
+SIEM/SOAR integrations
+
+Role-based access control
+
+Dedicated onboarding support
+
+CTA: Contact Sales
+
+Enterprise Plus (Custom)
+
+Best for: Highly regulated industries (Finance, Healthcare)
+
+Everything in Enterprise
+
+Dedicated AI Security Architect
+
+Custom rule development
+
+Data residency controls
+
+Private deployment options
+
+Continuous compliance monitoring
+
+CTA: Talk to an Expert
+
+Pricing Highlights
+
+No agents required
+
+15-minute setup
+
+Scales automatically with your AI usage
+
+Transparent asset-based pricing
+
+FAQ Section
+How is pricing calculated?
+
+Pricing is based on the number of AI assets discovered and monitored.
+
+What is considered an AI asset?
+
+Any resource involved in the AI lifecycle, including models, datasets, agents, and vector databases.
+
+Do you support multi-cloud environments?
+
+Yes. Fyx supports AWS, Azure, and GCP in a unified platform.
+
+Is there a free trial?
+
+Yes. You can start with a free scan to discover your AI exposure.
+
+Final CTA
+Title
+
+Start Securing Your AI Today
+
+CTA Buttons
+
+Start Free Scan
+Book a Demo
+
+2. Trust & Security Page
+Hero Section
+Title
+
+Built for Trust. Designed for AI Security.
+
+Subtitle
+
+Enterprise-grade security and compliance for the AI era.
+
+Paragraph
+
+Fyx Cloud AI is built with the same principles it enforces: strong identity controls, secure data handling, and continuous monitoring. We help you secure your AI—and we hold ourselves to the highest security standards.
+
+Platform Security
+Cloud-Native Architecture
+
+Fyx integrates via secure APIs and does not require agents or intrusive access.
+
+Least Privilege Access
+
+All integrations use read-only roles with scoped permissions.
+
+Encryption
+
+Data in transit: TLS 1.2+
+
+Data at rest: AES-256 encryption
+
+Optional customer-managed keys (CMEK)
+
+Data Protection
+No Data Training
+
+Fyx never uses your data to train AI models.
+
+Data Isolation
+
+Each customer environment is logically isolated.
+
+Sensitive Data Handling
+
+PII/PHI detection is performed securely without exposing raw data.
+
+Identity & Access Control
+
+Role-based access control (RBAC)
+
+SSO integration (SAML / OAuth)
+
+Multi-factor authentication (MFA)
+
+Session-based authentication
+
+Compliance & Certifications
+
+Fyx supports and aligns with:
+
+EU AI Act (2026 readiness)
+
+NIST AI Risk Management Framework
+
+ISO 42001 (AI Management Systems)
+
+SOC 2 (in progress / planned)
+
+GDPR & UK Data Protection Act
+
+AI-Specific Security Controls
+AI Guardrails Monitoring
+
+Ensures safety filters are active across models.
+
+Prompt Security
+
+Detects and prevents prompt injection attacks.
+
+Model Governance
+
+Tracks model lineage, versions, and usage.
+
+Data Lineage
+
+Ensures full traceability of training and RAG data.
+
+Responsible AI Commitment
+
+Fyx is committed to:
+
+Transparent AI governance
+
+Ethical AI usage
+
+Human-in-the-loop enforcement for high-risk systems
+
+Bias and fairness monitoring support
+
+Incident Response
+
+Continuous monitoring of platform activity
+
+Real-time alerting for suspicious behavior
+
+Defined incident response processes
+
+Customer notification procedures
+
+Final CTA
+Title
+
+Security You Can Trust. Visibility You Can Act On.
+
+CTA
+
+Learn More About Our Security
+
+3. Architecture Page
+Hero Section
+Title
+
+AI Security, Built as a System.
+
+Subtitle
+
+A unified architecture for securing the entire AI lifecycle.
+
+Paragraph
+
+Fyx Cloud AI is designed to map, monitor, and secure the complete AI supply chain—from raw data ingestion to model inference and agent execution. Our architecture is built to provide deep visibility without disrupting your cloud environment.
+
+Architecture Overview
+
+Fyx operates across three core layers:
+
+Ingestion Layer (Cloud APIs)
+
+AI Risk Engine (Analysis & Correlation)
+
+Presentation Layer (Dashboard & Alerts)
+
+1. Ingestion Layer
+Function
+
+Connects to cloud environments and collects AI-related metadata.
+
+Integrations
+
+AWS
+
+Bedrock
+
+SageMaker
+
+S3
+
+IAM
+
+CloudWatch
+
+CloudTrail
+
+Azure
+
+Azure OpenAI
+
+Azure ML
+
+Entra ID
+
+Purview
+
+GCP
+
+Vertex AI
+
+GCS
+
+IAM
+
+Logging
+
+Data Collected
+
+AI asset inventory
+
+IAM roles and permissions
+
+network configurations
+
+storage metadata
+
+model configurations
+
+runtime logs
+
+2. AI Risk Engine
+Function
+
+Analyzes AI assets and detects risks using AI-SPM rules.
+
+Core Components
+Detection Engine
+
+Runs 100+ AI-SPM rules including:
+
+Shadow AI detection
+
+IAM misconfigurations
+
+data exposure risks
+
+runtime vulnerabilities
+
+Graph Correlation Engine
+
+Builds relationships between:
+
+identities
+
+data sources
+
+models
+
+endpoints
+
+Enables Toxic Path Analysis
+
+Data Security Engine
+
+PII/PHI detection
+
+data lineage tracking
+
+dataset integrity validation
+
+Runtime Analysis Engine
+
+prompt injection detection
+
+jailbreak monitoring
+
+output safety validation
+
+3. Presentation Layer
+Function
+
+Provides actionable insights to users.
+
+Features
+
+unified dashboard
+
+AI-BOM inventory view
+
+risk prioritization
+
+compliance reports
+
+alerting system
+
+Data Flow Summary
+
+Cloud APIs provide AI asset data
+
+Fyx normalizes and enriches metadata
+
+Detection engine applies AI-SPM rules
+
+Graph engine identifies toxic paths
+
+Results are presented in dashboard and alerts
+
+Deployment Model
+SaaS (Default)
+
+Fully managed by Fyx
+
+secure API integrations
+
+no infrastructure required
+
+Private Deployment (Enterprise)
+
+VPC deployment options
+
+data residency control
+
+dedicated environments
+
+Security by Design
+
+Agentless architecture
+
+least-privilege access
+
+encrypted communication
+
+scalable multi-cloud design
+
+Key Differentiator
+
+Traditional tools:
+
+scan infrastructure
+
+Fyx:
+
+secures the AI lifecycle
+
+Final CTA
+Title
+
+See How Fyx Secures Your AI Stack
+
+CTA
+
+Request Architecture Walkthrough

@@ -1,0 +1,27 @@
+Rule ID	Rule Name	Rule Description	Applicability
+DIS-001	Shadow AI: Unsanctioned SaaS AI	Detect traffic to unauthorized AI providers (e.g., Perplexity, Claude) from corporate VPCs.	Multi-Cloud (Network)
+DIS-002	Rogue SageMaker Notebooks	Flag SageMaker notebook instances with public IP addresses and no VPC connectivity.	AWS
+DIS-003	Unmanaged Azure AI Foundry	Identify Azure AI Foundry projects created outside of approved subscriptions/management groups.	Azure
+DIS-004	Uninventoried Vertex AI Endpoints	Detect Vertex AI endpoints that are not tagged with a valid "Owner" or "Project ID".	GCP
+DIS-005	Ghost Model Artifacts	Identify orphaned .bin or .safetensors files in S3/Blob storage not linked to a deployed model.	Multi-Cloud (Storage)
+INF-006	Public Inference Endpoints	Flag any AI model endpoint (Bedrock/Azure OpenAI) with an access policy of Allow *.	Multi-Cloud
+INF-007	Missing Private Endpoints	Alert if Bedrock or OpenAI services are accessed via public internet instead of PrivateLink.	AWS / Azure
+INF-008	Unencrypted Model Weights	Detect model artifacts in buckets/disks without Customer-Managed Encryption Keys (CMEK).	Multi-Cloud
+INF-009	Insecure Vector DB Access	Flag Pinecone or Weaviate instances in the cloud with "Open to World" firewall rules.	Multi-Cloud
+INF-010	Legacy Model Version Use	Detect usage of deprecated or EOL model versions (e.g., GPT-3.5-Turbo-0301) with known flaws.	Multi-Cloud (API)
+DAT-011	PII in Training Buckets	Scan data sources used for "Fine-tuning" for clear-text SSNs, emails, or credit card info.	Multi-Cloud (DSPM)
+DAT-012	Unmasked Prompt Logs	Detect if AI prompt/response logs are being stored in unencrypted, publicly accessible buckets.	Multi-Cloud
+DAT-013	Cross-Region AI Data Flow	Flag if training data is being moved to a cloud region restricted by data residency laws (GDPR).	Multi-Cloud
+DAT-014	Embedding Data Leakage	Detect if vector embeddings are generated from sensitive data without proper salt/hashing.	Multi-Cloud
+DAT-015	Shadow Data Pipelines	Identify Dataflow or Glue jobs moving data from production DBs into AI-specific buckets.	GCP / AWS
+IAM-016	Overprivileged SageMaker Role	Alert on SageMaker execution roles with AdministratorAccess or s3:* permissions.	AWS
+IAM-017	AI Service Principal Key Age	Flag service accounts used for AI API access that haven't rotated keys in >90 days.	Multi-Cloud
+IAM-018	Anonymous Model Evaluation	Detect model "Evaluation" jobs triggered by identities without multi-factor authentication (MFA).	Multi-Cloud
+IAM-019	User-to-Model Entitlement Drift	Alert when a user who left the "AI Research" group still has InvokeModel permissions.	Multi-Cloud (CIEM)
+IAM-020	Leaked AI Tokens in Code	Scan CloudShell and Lambda environment variables for hardcoded OPENAI_API_KEY.	Multi-Cloud
+GRD-021	Disabled Content Safety Filters	Detect if Azure OpenAI / Bedrock Guardrails are set to "Disabled" or "Low" severity.	AWS / Azure
+GRD-022	Missing Prompt Injection Shield	Flag model deployments that do not have a dedicated "Jailbreak" detection layer enabled.	Multi-Cloud
+GRD-023	Unconstrained Model Output	Detect if max_tokens is set to unlimited, risking Model Denial of Service (DoS).	Multi-Cloud (API)
+GRD-024	Excessive Model Temperature	Flag production models with temperature > 1.2, increasing hallucination/instability risks.	Multi-Cloud
+GRD-025	Missing Grounding Check	Alert on RAG (Retrieval Augmented Generation) pipelines with no "Factuality" check enabled.	Multi-Cloud
+SUP-026	Untrusted Model Source	Flag Custom Model Import jobs from untrusted registries or non-corporate HuggingFace repos.	Multi-Cloud
